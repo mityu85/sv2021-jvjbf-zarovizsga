@@ -84,14 +84,14 @@ public class PlayerControllerRestIT {
 
     }
 
-//    @Test
-//    void testCreatePlayerWithInvalidName(){
-//        Problem result =
-//                template.postForObject("/api/players",
-//                        new CreateTeamCommand(""),
-//                        Problem.class);
-//
-//        assertEquals(Status.BAD_REQUEST,result.getStatus());
-//    }
+    @Test
+    void testCreatePlayerWithInvalidName(){
+        Problem result =
+                template.postForObject("/api/players",
+                        new CreatePlayerCommand("", LocalDate.now(), PositionType.CENTER_BACK),
+                        Problem.class);
+
+        assertEquals(Status.BAD_REQUEST,result.getStatus());
+    }
 
 }
