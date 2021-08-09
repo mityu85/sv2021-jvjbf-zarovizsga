@@ -22,9 +22,9 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:8080/api/teams/2/players
+PUT http://localhost:8080/api/teams/1/players
 Content-Type: application/json
 
 {
-  "playerId": 1
+  "playerId": 6
 }
