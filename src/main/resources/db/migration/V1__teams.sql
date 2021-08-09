@@ -1,0 +1,1 @@
+create table teams(id bigint, team_name varchar(250), player_id bigint, primary key (id));
